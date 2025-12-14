@@ -8,5 +8,7 @@ export default defineConfig({
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()]
-  }
+  },
+  site: 'https://philliams.github.io',
+  base: '/master_ken',
 });
