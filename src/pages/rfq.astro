@@ -19,13 +19,12 @@ import warehouseImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
         class="w-full h-full object-cover"
         width={2070}
         height={1380}
-      />
-      <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(51, 29, 29, 0.95), rgba(159, 52, 52, 0.90), rgba(51, 29, 29, 0.85));"></div>
+      />      <div class="absolute inset-0" overlay-brown-burgundy></div>
     </div>
 
     <!-- Content -->
     <div class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">      <div class="max-w-4xl mx-auto text-center">
-        <div class="inline-flex items-center px-4 py-2 mb-6 text-white text-sm font-semibold rounded-full shadow-lg animate-fadeInUp" style="background: linear-gradient(to right, #9f3434, #8d7051);">
+        <div class="inline-flex items-center px-4 py-2 mb-6 bg-gradient-warm-horizontal text-white text-sm font-semibold rounded-full shadow-lg animate-fadeInUp">
           <FileText className="w-4 h-4 mr-2" />
           Get Your Custom Quote Today
         </div>
@@ -40,16 +39,16 @@ import warehouseImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
         </p>        <!-- Quick Stats -->
         <div class="grid grid-cols-2 md:grid-cols-3 gap-6 pt-8 border-t border-white/20 animate-fadeInUp" style="animation-delay: 0.3s">
           <div class="group">
-            <div class="text-3xl md:text-4xl font-bold mb-1" style="background: linear-gradient(to right, #ffffff, #e1b486); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">24hr</div>
-            <div class="text-sm text-slate-300 transition-colors" onmouseenter="this.style.color='#e1b486'" onmouseleave="this.style.color=''">Response Time</div>
+            <div class="text-3xl md:text-4xl font-bold mb-1 gradient-text-warm">24hr</div>
+            <div class="text-sm text-slate-300 transition-colors hover:text-light-tan-dark">Response Time</div>
           </div>
           <div class="group">
-            <div class="text-3xl md:text-4xl font-bold mb-1" style="background: linear-gradient(to right, #ffffff, #e1b486); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">500+</div>
-            <div class="text-sm text-slate-300 transition-colors" onmouseenter="this.style.color='#e1b486'" onmouseleave="this.style.color=''">Happy Clients</div>
+            <div class="text-3xl md:text-4xl font-bold mb-1 gradient-text-warm">500+</div>
+            <div class="text-sm text-slate-300 transition-colors hover:text-light-tan-dark">Happy Clients</div>
           </div>
           <div class="group">
-            <div class="text-3xl md:text-4xl font-bold mb-1" style="background: linear-gradient(to right, #ffffff, #e1b486); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">99.9%</div>
-            <div class="text-sm text-slate-300 transition-colors" onmouseenter="this.style.color='#e1b486'" onmouseleave="this.style.color=''">On-Time Rate</div>
+            <div class="text-3xl md:text-4xl font-bold mb-1 gradient-text-warm">99.9%</div>
+            <div class="text-sm text-slate-300 transition-colors hover:text-light-tan-dark">On-Time Rate</div>
           </div>
         </div>
       </div>
@@ -71,20 +70,17 @@ import warehouseImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
         <Card>
           <RFQForm client:load />
         </Card>
-      </div>
-
-      <!-- Sidebar -->
+      </div>      <!-- Sidebar -->
       <div class="space-y-6">        <!-- Contact Info Card -->
-        <Card class="border-2" style="background: linear-gradient(135deg, #f2d1b5, #e1b486); border-color: #8d7051;">
+        <Card class="border-2 bg-gradient-light-tan border-tan">
           <div class="flex items-center mb-4">
-            <div class="w-10 h-10 rounded-lg flex items-center justify-center mr-3" style="background: linear-gradient(135deg, #9f3434, #8d7051);">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center mr-3 bg-gradient-warm">
               <Phone className="w-5 h-5 text-white" />
             </div>
-            <h3 class="text-xl font-bold" style="color: #331d1d;">Need Help?</h3>
-          </div>          <div class="space-y-4 text-sm">
-            <div class="flex items-start space-x-3 p-3 rounded-lg hover:shadow-md transition-shadow" style="background-color: #ffffff;">
+            <h3 class="text-xl font-bold text-brown">Need Help?</h3>
+          </div><div class="space-y-4 text-sm">            <div class="flex items-start space-x-3 p-3 rounded-lg hover:shadow-md transition-shadow" style="background-color: #ffffff;">
               <div class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style="background-color: rgba(159, 52, 52, 0.1);">
-                <Phone className="w-5 h-5" style="color: #9f3434;" />
+                <Phone className="w-5 h-5" style={{ color: '#9f3434' }} />
               </div>
               <div>
                 <div class="font-semibold" style="color: #331d1d;">Phone</div>
@@ -95,7 +91,7 @@ import warehouseImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
 
             <div class="flex items-start space-x-3 p-3 rounded-lg hover:shadow-md transition-shadow" style="background-color: #ffffff;">
               <div class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style="background-color: rgba(141, 112, 81, 0.1);">
-                <Mail className="w-5 h-5" style="color: #8d7051;" />
+                <Mail className="w-5 h-5" style={{ color: '#8d7051' }} />
               </div>
               <div>
                 <div class="font-semibold" style="color: #331d1d;">Email</div>
@@ -106,7 +102,7 @@ import warehouseImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
 
             <div class="flex items-start space-x-3 p-3 rounded-lg hover:shadow-md transition-shadow" style="background-color: #ffffff;">
               <div class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style="background-color: rgba(159, 52, 52, 0.1);">
-                <MessageCircle className="w-5 h-5" style="color: #9f3434;" />
+                <MessageCircle className="w-5 h-5" style={{ color: '#9f3434' }} />
               </div>
               <div>
                 <div class="font-semibold" style="color: #331d1d;">Live Chat</div>
@@ -159,28 +155,27 @@ import warehouseImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
               <Award className="w-5 h-5 text-white" />
             </div>
             <h3 class="text-xl font-bold" style="color: #331d1d;">Why Choose Us?</h3>
-          </div>          <ul class="space-y-3 text-sm">
-            <li class="flex items-start space-x-3 p-3 rounded-lg hover:shadow-md transition-shadow" style="background-color: #ffffff;">
+          </div>          <ul class="space-y-3 text-sm">            <li class="flex items-start space-x-3 p-3 rounded-lg hover:shadow-md transition-shadow" style="background-color: #ffffff;">
               <div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style="background-color: rgba(159, 52, 52, 0.1);">
-                <TrendingUp className="w-4 h-4" style="color: #9f3434;" />
+                <TrendingUp className="w-4 h-4" style={{ color: '#9f3434' }} />
               </div>
               <span class="text-gray-700 pt-1">25+ years of industry experience</span>
             </li>
             <li class="flex items-start space-x-3 p-3 rounded-lg hover:shadow-md transition-shadow" style="background-color: #ffffff;">
               <div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style="background-color: rgba(141, 112, 81, 0.1);">
-                <CheckCircle2 className="w-4 h-4" style="color: #8d7051;" />
+                <CheckCircle2 className="w-4 h-4" style={{ color: '#8d7051' }} />
               </div>
               <span class="text-gray-700 pt-1">99.9% on-time delivery rate</span>
             </li>
             <li class="flex items-start space-x-3 p-3 rounded-lg hover:shadow-md transition-shadow" style="background-color: #ffffff;">
               <div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style="background-color: rgba(159, 52, 52, 0.1);">
-                <Shield className="w-4 h-4" style="color: #9f3434;" />
+                <Shield className="w-4 h-4" style={{ color: '#9f3434' }} />
               </div>
               <span class="text-gray-700 pt-1">ISO 9001 certified facilities</span>
             </li>
             <li class="flex items-start space-x-3 p-3 rounded-lg hover:shadow-md transition-shadow" style="background-color: #ffffff;">
               <div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style="background-color: rgba(141, 112, 81, 0.1);">
-                <Users className="w-4 h-4" style="color: #8d7051;" />
+                <Users className="w-4 h-4" style={{ color: '#8d7051' }} />
               </div>
               <span class="text-gray-700 pt-1">24/7 customer support</span>
             </li>

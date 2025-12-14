@@ -21,10 +21,9 @@ export default function CapabilityAccordion({ capabilities }: Props) {
           value={`item-${index}`}
           className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-xl transition-shadow"
         >
-          <Accordion.Header>
-            <Accordion.Trigger className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors group">
+          <Accordion.Header>            <Accordion.Trigger className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors group">
               <div className="flex items-center space-x-4">
-                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-linear-to-br from-blue-500 to-teal-500 text-white shadow-md shrink-0">
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg text-white shadow-md shrink-0" style={{ background: 'linear-gradient(135deg, #9f3434, #8d7051)' }}>
                   <div
                     className="w-6 h-6"
                     dangerouslySetInnerHTML={{ __html: capability.icon.replace('w-12 h-12', 'w-6 h-6').replace('currentColor', 'white') }}

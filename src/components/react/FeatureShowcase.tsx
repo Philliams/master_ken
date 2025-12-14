@@ -61,8 +61,7 @@ export default function FeatureShowcase() {
         >
           <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
             {/* Image */}
-            <div className="relative h-64 overflow-hidden">
-              <motion.img
+            <div className="relative h-64 overflow-hidden">              <motion.img
                 src={feature.image.src}
                 alt={feature.title}
                 className="w-full h-full object-cover"
@@ -70,7 +69,7 @@ export default function FeatureShowcase() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.4 }}
               />
-              <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60" />
+              <div className="absolute inset-0 opacity-60" style={{ background: 'linear-gradient(to top, rgb(15, 23, 42), rgba(15, 23, 42, 0.5), transparent)' }} />
               
               {/* Icon overlay */}
               <motion.div

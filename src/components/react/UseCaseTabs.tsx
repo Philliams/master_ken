@@ -72,15 +72,14 @@ export default function UseCaseTabs({ useCases }: Props) {
             <div className="rounded-2xl border border-gray-200 shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group" style={{ backgroundColor: '#ffffff' }}>
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
                 {/* Image Section */}
-                <div className="lg:col-span-5 relative h-64 lg:h-auto overflow-hidden">
-                  <img
+                <div className="lg:col-span-5 relative h-64 lg:h-auto overflow-hidden">                  <img
                     src={useCase.image.src}
                     alt={useCase.industry}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-slate-900/40 to-transparent"></div>
-                  <div className="absolute top-6 left-6">                  <div className="w-16 h-16 rounded-xl bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-lg">
+                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.4), transparent)' }}></div>
+                  <div className="absolute top-6 left-6"><div className="w-16 h-16 rounded-xl bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-lg">
                       {IconComponent && (
                         <IconComponent className="w-8 h-8 text-burgundy" />
                       )}

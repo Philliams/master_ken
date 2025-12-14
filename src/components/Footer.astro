@@ -6,9 +6,8 @@ import { Package, Linkedin, Twitter, Facebook } from 'lucide-react';
 <footer class="bg-slate-900 text-slate-300">
   <div class="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-12 lg:grid-cols-4">
-      <!-- Company Info -->      <div class="lg:col-span-1 space-y-6">
-        <a href="/" class="flex items-center space-x-3 group">
-          <div class="flex items-center justify-center w-12 h-12 rounded-lg" style="background: linear-gradient(135deg, #9f3434, #8d7051);">
+      <!-- Company Info -->      <div class="lg:col-span-1 space-y-6">        <a href="/" class="flex items-center space-x-3 group">
+          <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-warm">
             <Package className="w-7 h-7 text-white" />
           </div>
           <span class="text-2xl font-bold text-white">
@@ -119,14 +118,10 @@ import { Package, Linkedin, Twitter, Facebook } from 'lucide-react';
             </a>
           </li>
         </ul>
-        
-        <div class="mt-8">
+          <div class="mt-8">
           <a
             href="/rfq"
-            class="inline-flex items-center px-6 py-3 text-sm font-semibold text-white rounded-lg shadow-lg hover:shadow-xl transition-all"
-            style="background: linear-gradient(to right, #9f3434, #8d7051);"
-            onmouseenter="this.style.background='linear-gradient(to right, #7d2929, #6d5a41)'"
-            onmouseleave="this.style.background='linear-gradient(to right, #9f3434, #8d7051)'"
+            class="inline-flex items-center px-6 py-3 text-sm font-semibold text-white rounded-lg shadow-lg hover:shadow-xl transition-all bg-gradient-warm-horizontal hover:bg-gradient-burgundy"
           >
             Get Started
           </a>
