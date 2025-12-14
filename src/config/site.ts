@@ -2,7 +2,7 @@
 export const SITE = {
   title: 'Master Ken',
   description: '-- Put Small Description Blurb --',
-  url: 'https://masterken.com',
+  url: 'https://philliams.github.io/master_ken',
   author: 'Master ken',
 } as const;
 
