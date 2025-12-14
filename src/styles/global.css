@@ -1,12 +1,40 @@
 @import "tailwindcss";
 
+/* Tailwind v4 Theme Configuration */
+@theme {
+  /* Custom Martial Arts Dojo Color Palette */
+  --color-burgundy: #9f3434;
+  --color-burgundy-light: #b84444;
+  --color-burgundy-dark: #7a2828;
+  
+  --color-brown: #331d1d;
+  --color-brown-light: #4a2f2f;
+  --color-brown-dark: #1f1212;
+  
+  --color-tan: #8d7051;
+  --color-tan-light: #a58665;
+  --color-tan-dark: #6f5840;
+  
+  --color-light-tan: #f2d1b5;
+  --color-light-tan-dark: #e1b486;
+  --color-light-tan-darker: #d0a075;
+  
+  /* Animation keyframes */
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
 /* Smooth scrolling */
 html {
   @apply scroll-smooth;
 }
 
+/* Apply light tan background to body */
+body {
+  @apply bg-light-tan;
+}
+
 .nav-active {
-  @apply after:content-[""] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-1.5 after:h-1.5 after:bg-blue-300 hover:after:bg-transparent after:rounded-full;
+  @apply after:content-[""] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-1.5 after:h-1.5 hover:after:bg-transparent after:rounded-full after:bg-burgundy;
 }
 
 /* Animations */
@@ -39,8 +67,68 @@ html {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #2563eb, #0d9488);
+  @apply bg-linear-to-r from-burgundy to-tan bg-clip-text text-transparent;
+}
+
+/* Gradient Utilities */
+.bg-gradient-burgundy {
+  background: linear-gradient(135deg, #9f3434 0%, #7a2828 100%);
+}
+
+.bg-gradient-warm {
+  background: linear-gradient(135deg, #9f3434 0%, #8d7051 100%);
+}
+
+.bg-gradient-earth {
+  background: linear-gradient(135deg, #331d1d 0%, #7a2828 100%);
+}
+
+.bg-gradient-tan {
+  background: linear-gradient(135deg, #8d7051 0%, #6f5840 100%);
+}
+
+.bg-gradient-light-tan {
+  background: linear-gradient(135deg, #f2d1b5 0%, #e1b486 100%);
+}
+
+.bg-gradient-warm-horizontal {
+  background: linear-gradient(to right, #9f3434, #8d7051);
+}
+
+.bg-gradient-tan-alt {
+  background: linear-gradient(135deg, #8d7051 0%, #9f8064 100%);
+}
+
+.bg-gradient-burgundy-alt {
+  background: linear-gradient(135deg, #9f3434 0%, #8d4747 100%);
+}
+
+/* Gradient text utilities */
+.gradient-text-warm {
+  background: linear-gradient(to right, #ffffff, #e1b486);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+.gradient-text-process {
+  background: linear-gradient(to right, #e1b486, #9f3434, #8d7051, #e1b486);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-process {
+  background: linear-gradient(to right, #e1b486, #9f3434, #8d7051, #e1b486);
+}
+
+/* Gradient overlay utilities */
+.overlay-brown-burgundy {
+  background: linear-gradient(to right, rgba(51, 29, 29, 0.95), rgba(159, 52, 52, 0.90), rgba(51, 29, 29, 0.85));
+}
+
+.overlay-brown-burgundy-light {
+  background: linear-gradient(to right, rgba(51, 29, 29, 0.90), rgba(159, 52, 52, 0.80), rgba(51, 29, 29, 0.70));
+}
+
+/* Remove manually defined utility classes - Tailwind v4 auto-generates these from @theme */

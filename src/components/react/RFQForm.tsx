@@ -1,6 +1,7 @@
 import * as Label from '@radix-ui/react-label';
 import * as Checkbox from '@radix-ui/react-checkbox';
 import { Check, User, Building2, Briefcase, Warehouse, Factory, Truck, Network, Wrench, Cpu, Calendar, Package } from 'lucide-react';
+import './RFQForm.css';
 
 export default function RFQForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -20,10 +21,9 @@ export default function RFQForm() {
 
   return (
     <form className="space-y-6" id="rfq-form" onSubmit={handleSubmit} name="rfq-form">
-      {/* Contact Information */}
-      <div>
+      {/* Contact Information */}      <div>
         <div className="flex items-center mb-6">
-          <div className="w-10 h-10 rounded-lg bg-linear-to-br from-blue-600 to-teal-600 flex items-center justify-center mr-3">
+          <div className="w-10 h-10 rounded-lg flex items-center justify-center mr-3" style={{ background: 'linear-gradient(135deg, #9f3434, #8d7051)' }}>
             <User className="w-5 h-5 text-white" />
           </div>
           <h2 className="text-2xl font-bold text-gray-900">
@@ -94,10 +94,9 @@ export default function RFQForm() {
         </div>
       </div>
 
-      {/* Company Information */}
-      <div className="pt-6 border-t border-gray-200">
+      {/* Company Information */}      <div className="pt-6 border-t border-gray-200">
         <div className="flex items-center mb-6">
-          <div className="w-10 h-10 rounded-lg bg-linear-to-br from-purple-600 to-pink-600 flex items-center justify-center mr-3">
+          <div className="w-10 h-10 rounded-lg flex items-center justify-center mr-3" style={{ background: 'linear-gradient(135deg, #8d7051, #6f5840)' }}>
             <Building2 className="w-5 h-5 text-white" />
           </div>
           <h2 className="text-2xl font-bold text-gray-900">
@@ -146,10 +145,9 @@ export default function RFQForm() {
         </div>
       </div>
 
-      {/* Service Requirements */}
-      <div className="pt-6 border-t border-gray-200">
+      {/* Service Requirements */}      <div className="pt-6 border-t border-gray-200">
         <div className="flex items-center mb-6">
-          <div className="w-10 h-10 rounded-lg bg-linear-to-br from-green-600 to-emerald-600 flex items-center justify-center mr-3">
+          <div className="w-10 h-10 rounded-lg flex items-center justify-center mr-3" style={{ background: 'linear-gradient(135deg, #9f3434, #8d7051)' }}>
             <Briefcase className="w-5 h-5 text-white" />
           </div>
           <h2 className="text-2xl font-bold text-gray-900">
@@ -170,28 +168,29 @@ export default function RFQForm() {
                 { id: 'value-added', label: 'Value-Added Services', icon: Wrench },
                 { id: 'technology', label: 'Technology Integration', icon: Cpu },
               ].map((service) => {
-                const IconComponent = service.icon;
-                return (
+                const IconComponent = service.icon;                return (
                   <div
                     key={service.id}
-                    className="flex items-center space-x-3 p-4 border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all cursor-pointer group"
-                  >
-                    <Checkbox.Root
+                    className="flex items-center space-x-3 p-4 border-2 border-gray-200 rounded-lg hover:bg-light-tan transition-all cursor-pointer group"
+                    style={{ borderColor: '#e5e7eb' }}
+                    onMouseEnter={(e) => e.currentTarget.style.borderColor = '#9f3434'}
+                    onMouseLeave={(e) => e.currentTarget.style.borderColor = '#e5e7eb'}
+                  >                    <Checkbox.Root
                       id={service.id}
                       name="services"
                       value={service.id}
-                      className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600 transition-colors shrink-0"
+                      className="service-checkbox-root w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded transition-colors shrink-0"
                     >
                       <Checkbox.Indicator>
                         <Check className="w-4 h-4 text-white" />
                       </Checkbox.Indicator>
                     </Checkbox.Root>
-                    <div className="w-8 h-8 rounded-lg bg-gray-100 group-hover:bg-blue-100 flex items-center justify-center shrink-0 transition-colors">
-                      <IconComponent className="w-4 h-4 text-gray-600 group-hover:text-blue-600 transition-colors" />
+                    <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center shrink-0 transition-colors">
+                      <IconComponent className="w-4 h-4 text-gray-600 transition-colors" style={{ color: '#6b7280' }} />
                     </div>
                     <Label.Root
                       htmlFor={service.id}
-                      className="text-sm font-medium text-gray-700 cursor-pointer flex-1 group-hover:text-gray-900 transition-colors"
+                      className="text-sm font-medium text-gray-700 cursor-pointer flex-1 transition-colors"
                     >
                       {service.label}
                     </Label.Root>
@@ -215,7 +214,7 @@ export default function RFQForm() {
                   id="timeline"
                   name="timeline"
                   required
-                  className="w-full px-4 py-2 pl-10 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition appearance-none bg-white"
+                  className="w-full px-4 py-2 pl-10 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-burgundy focus:border-burgundy transition appearance-none bg-white"
                 >
                   <option value="">Select timeline</option>
                   <option value="immediate">Immediate (Within 1 month)</option>
@@ -265,13 +264,14 @@ export default function RFQForm() {
             />
           </div>
         </div>
-      </div>
-
-      {/* Submit Button */}
+      </div>      {/* Submit Button */}
       <div className="pt-6">
         <button
           type="submit"
-          className="w-full bg-linear-to-r from-blue-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:from-blue-700 hover:to-teal-700 transition-all duration-200 hover:shadow-xl active:scale-95 flex items-center justify-center space-x-2"
+          className="w-full text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg transition-all duration-200 hover:shadow-xl active:scale-95 flex items-center justify-center space-x-2"
+          style={{ background: 'linear-gradient(to right, #9f3434, #8d7051)' }}
+          onMouseEnter={(e) => e.currentTarget.style.background = 'linear-gradient(to right, #7a2828, #6f5840)'}
+          onMouseLeave={(e) => e.currentTarget.style.background = 'linear-gradient(to right, #9f3434, #8d7051)'}
         >
           <span>Submit Request</span>
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
