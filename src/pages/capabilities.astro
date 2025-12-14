@@ -126,7 +126,7 @@ const capabilities = [
     </div>    <!-- Content -->
     <div class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto text-center">
-        <div class="inline-flex items-center px-4 py-2 mb-6 text-white text-sm font-semibold rounded-full shadow-lg" style="background: linear-gradient(135deg, #9f3434 0%, #7a2828 100%);">
+        <div class="inline-flex items-center px-4 py-2 mb-6 text-white text-sm font-semibold rounded-full shadow-lg bg-gradient-burgundy">
           <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
           </svg>
@@ -179,7 +179,7 @@ const capabilities = [
             </p>            <ul class="space-y-3">
               {capability.features.map((feature) => (
                 <li class="flex items-center space-x-3">
-                  <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #8d7051;">
+                  <svg class="w-5 h-5 shrink-0 text-tan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
                   <span class="text-gray-700">{feature}</span>
@@ -212,13 +212,13 @@ const capabilities = [
   <!-- Process Section -->
   <Section background="white">
     <div class="text-center mb-16">
-      <div class="inline-block px-4 py-2 mb-4 text-sm font-semibold rounded-full" style="background-color: #e1b486; color: #331d1d;">
+      <div class="inline-block px-4 py-2 mb-4 text-sm font-semibold rounded-full bg-light-tan-dark text-brown">
         Our Approach
       </div>
-      <h2 class="text-4xl md:text-5xl font-bold mb-4" style="color: #331d1d;">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 text-brown">
         Our <span class="gradient-text">Process</span>
       </h2>
-      <p class="text-xl max-w-3xl mx-auto leading-relaxed" style="color: #4a2f2f;">
+      <p class="text-xl max-w-3xl mx-auto leading-relaxed text-brown-light">
         A streamlined approach to deliver exceptional results every time.
       </p>
     </div>
@@ -258,12 +258,12 @@ const capabilities = [
           </svg>`
         }      ].map((process, index) => (
         <Card hover class="text-center animate-fadeInUp group" style={`animation-delay: ${index * 0.1}s`}>
-          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-xl text-white shadow-lg group-hover:scale-110 transition-transform" style={`background: linear-gradient(135deg, ${index % 2 === 0 ? '#9f3434 0%, #7a2828 100%' : '#8d7051 0%, #6f5840 100%'});`}>
+          <div class={`flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-xl text-white shadow-lg group-hover:scale-110 transition-transform ${index % 2 === 0 ? 'bg-gradient-burgundy' : 'bg-gradient-tan'}`}>
             <div set:html={process.icon} />
           </div>
           <div class="text-3xl font-bold gradient-text mb-2">{process.step}</div>
-          <h3 class="text-xl font-bold mb-3" style="color: #331d1d;">{process.title}</h3>
-          <p class="leading-relaxed" style="color: #4a2f2f;">{process.description}</p>
+          <h3 class="text-xl font-bold mb-3 text-brown">{process.title}</h3>
+          <p class="leading-relaxed text-brown-light">{process.description}</p>
         </Card>
       ))}
     </div>
