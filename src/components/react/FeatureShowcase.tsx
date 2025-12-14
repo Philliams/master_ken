@@ -1,49 +1,49 @@
 import { motion } from 'motion/react';
-import { Warehouse, Truck, Package, BarChart3, Shield, Headphones } from 'lucide-react';
+// import { Warehouse, Truck, Package, BarChart3, Shield, Headphones } from 'lucide-react';
 
-import warehouseImg from '@assets/photo-1553413077-190dd305871c.jpg';
-import truckImg from '@assets/photo-1601584115197-04ecc0da31d7.jpg';
-import packageImg from '@assets/photo-1581091226825-a6a2a5aee158.jpg';
-import barChart3Img from '@assets/photo-1551288049-bebda4e38f71.jpg';
-import shieldImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
-import headphonesImg from '@assets/photo-1486312338219-ce68d2c6f44d.jpg';
+import taekwondoImg from '@assets/taekwondo-1.jpg';
+import hapkidoImg from '@assets/hapkido-1.jpg';
+import boxingImg from '@assets/boxing-1.jpg';
+import fitnessImg from '@assets/fitness-1.jpg';
+import grapplingImg from '@assets/grappling-1.jpg';
+import childprogramImg from '@assets/kid_program-2.jpg';
 
 const features = [
   {
-    icon: Warehouse,
-    title: 'Advanced Warehousing',
-    description: 'Climate-controlled facilities with automated inventory systems and 24/7 security.',
-    image: warehouseImg,
+    // icon: Warehouse,
+    title: 'Taekwondo',
+    description: 'Song Moo Kwan and Kukkiwon Taekwondo',
+    image: taekwondoImg,
   },
   {
-    icon: Truck,
-    title: 'Fast Transportation',
-    description: 'Multi-modal logistics network ensuring rapid delivery across all destinations.',
-    image: truckImg,
+    // icon: Truck,
+    title: 'Hapkido',
+    description: 'Korean Hapkido Federation Kyung Mu Kwan system',
+    image: hapkidoImg,
   },
   {
-    icon: Package,
-    title: 'Quality Manufacturing',
-    description: 'ISO-certified production with precision engineering and quality control.',
-    image: packageImg,
+    // icon: Package,
+    title: 'Boxing',
+    description: 'NCCP Level 1 Boxing',
+    image: boxingImg,
   },
   {
-    icon: BarChart3,
-    title: 'Real-Time Analytics',
-    description: 'Complete supply chain visibility with advanced tracking and reporting.',
-    image: barChart3Img,
+    // icon: BarChart3,
+    title: 'Personal Fitness and Training',
+    description: '-- blurb for fitness stuff --',
+    image: fitnessImg,
   },
   {
-    icon: Shield,
-    title: 'Secure Operations',
-    description: 'Industry-leading security protocols protecting your valuable assets.',
-    image: shieldImg,
+    // icon: Shield,
+    title: 'Grappling',
+    description: 'Brazilian Ju Jitsu, Wrestling and Grappling',
+    image: grapplingImg,
   },
   {
-    icon: Headphones,
-    title: '24/7 Support',
-    description: 'Dedicated teams available around the clock to ensure seamless operations.',
-    image: headphonesImg,
+    // icon: Headphones,
+    title: 'Child Programs',
+    description: 'Structured Learning and Growth',
+    image: childprogramImg,
   },
 ];
 
@@ -72,7 +72,7 @@ export default function FeatureShowcase() {
               <div className="absolute inset-0 opacity-60" style={{ background: 'linear-gradient(to top, rgb(15, 23, 42), rgba(15, 23, 42, 0.5), transparent)' }} />
               
               {/* Icon overlay */}
-              <motion.div
+              {/* <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
@@ -80,7 +80,7 @@ export default function FeatureShowcase() {
                 className="absolute top-4 right-4 w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-lg"
               >
                 <feature.icon className="w-6 h-6 text-blue-600" />
-              </motion.div>
+              </motion.div> */}
             </div>
 
             {/* Content */}

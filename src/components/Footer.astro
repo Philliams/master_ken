@@ -1,6 +1,10 @@
 ---
 import { NAVIGATION, SOCIAL_LINKS, SITE } from '@config/site';
 import { Package, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Image } from 'astro:assets';
+
+import logoImg from '@assets/logo-bird.png';
+
 ---
 
 <footer class="bg-slate-900 text-slate-300">
@@ -8,10 +12,17 @@ import { Package, Linkedin, Twitter, Facebook } from 'lucide-react';
     <div class="grid grid-cols-1 gap-12 lg:grid-cols-4">
       <!-- Company Info -->      <div class="lg:col-span-1 space-y-6">        <a href="/" class="flex items-center space-x-3 group">
           <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-warm">
-            <Package className="w-7 h-7 text-white" />
+            <!-- <Package className="w-7 h-7 text-white" /> -->
+            <Image 
+            src={logoImg}
+            alt= "Master Ken logo"
+            class="w-7 h-7 object-cover"
+            width={40}
+            height={40}
+          />
           </div>
           <span class="text-2xl font-bold text-white">
-            AstroFlow
+            Master Ken
           </span>
         </a>
         <p class="text-sm text-slate-400 leading-relaxed max-w-xs">
@@ -61,7 +72,7 @@ import { Package, Linkedin, Twitter, Facebook } from 'lucide-react';
       </div>
 
       <!-- Services -->
-      <div>
+      <!-- <div>
         <h3 class="text-sm font-semibold uppercase tracking-wider text-white mb-6">
           Services
         </h3>        <ul class="space-y-3">
@@ -90,7 +101,7 @@ import { Package, Linkedin, Twitter, Facebook } from 'lucide-react';
             </a>
           </li>
         </ul>
-      </div>
+      </div> -->
 
       <!-- Contact -->
       <div>
@@ -99,7 +110,7 @@ import { Package, Linkedin, Twitter, Facebook } from 'lucide-react';
         </h3>        <ul class="space-y-3 text-sm">          <li>
             <a href="/rfq" class="text-slate-400 hover:text-tan transition-colors inline-flex items-center group">
               <span class="w-0 group-hover:w-2 h-0.5 bg-tan transition-all mr-0 group-hover:mr-2"></span>
-              Request a Quote
+              Contact
             </a>
           </li>
           <li>
@@ -111,10 +122,10 @@ import { Package, Linkedin, Twitter, Facebook } from 'lucide-react';
         </ul>
           <div class="mt-8">
           <a
-            href="/rfq"
+            href="/contact"
             class="inline-flex items-center px-6 py-3 text-sm font-semibold text-white rounded-lg shadow-lg hover:shadow-xl transition-all bg-gradient-warm-horizontal hover:bg-gradient-burgundy"
           >
-            Get Started
+            Contact
           </a>
         </div>
       </div>
