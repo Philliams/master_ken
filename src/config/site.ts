@@ -8,11 +8,11 @@ export const SITE = {
 
 export const NAVIGATION = [
   { name: 'Home', href: '/' },
-  { name: 'Traditional Martial Arts', href: '/traditional_martial_arts' },
-  { name: 'Mixed Martial Arts', href: '/mixed_martial_arts' },
-  { name: 'Fitness', href: '/personal_fitness'},
-  { name: 'Child Programs', href: '/child_programs' },
-  { name: 'About', href: '/about'}
+  { name: 'Traditional Martial Arts', href: '/master_ken/traditional_martial_arts' },
+  { name: 'Mixed Martial Arts', href: '/master_ken/mixed_martial_arts' },
+  { name: 'Fitness', href: '/master_ken/personal_fitness'},
+  { name: 'Child Programs', href: '/master_ken/child_programs' },
+  { name: 'About', href: '/master_ken/about'}
   // { name: 'Documentation', href: '/documentation' },
 ] as const;
 
