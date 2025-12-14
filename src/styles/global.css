@@ -118,6 +118,10 @@ body {
   background-clip: text;
 }
 
+.bg-gradient-process {
+  background: linear-gradient(to right, #e1b486, #9f3434, #8d7051, #e1b486);
+}
+
 /* Gradient overlay utilities */
 .overlay-brown-burgundy {
   background: linear-gradient(to right, rgba(51, 29, 29, 0.95), rgba(159, 52, 52, 0.90), rgba(51, 29, 29, 0.85));
