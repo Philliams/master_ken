@@ -215,7 +215,7 @@ export default function RFQForm() {
                   id="timeline"
                   name="timeline"
                   required
-                  className="w-full px-4 py-2 pl-10 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition appearance-none bg-white"
+                  className="w-full px-4 py-2 pl-10 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-burgundy focus:border-burgundy transition appearance-none bg-white"
                 >
                   <option value="">Select timeline</option>
                   <option value="immediate">Immediate (Within 1 month)</option>

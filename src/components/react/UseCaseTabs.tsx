@@ -47,11 +47,10 @@ export default function UseCaseTabs({ useCases }: Props) {
           return (
             <Tabs.Trigger
               key={industry}
-              value={industry}
-              className="group px-6 py-3 text-sm font-semibold text-gray-600 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-300 transition-all duration-200 data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 flex items-center gap-2"
+              value={industry}              className="group px-6 py-3 text-sm font-semibold text-gray-600 border-b-2 border-transparent hover:text-burgundy hover:border-tan transition-all duration-200 data-[state=active]:text-burgundy data-[state=active]:border-burgundy flex items-center gap-2"
             >
               {IconComponent && (
-                <IconComponent className="w-4 h-4 group-data-[state=active]:text-blue-600" />
+                <IconComponent className="w-4 h-4 group-data-[state=active]:text-burgundy" />
               )}
               {industry}
             </Tabs.Trigger>
@@ -69,9 +68,8 @@ export default function UseCaseTabs({ useCases }: Props) {
           <Tabs.Content 
             key={industry} 
             value={industry} 
-            className="space-y-6 animate-fadeIn"
-          >
-            <div className="bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group">
+            className="space-y-6 animate-fadeIn"          >
+            <div className="rounded-2xl border border-gray-200 shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group" style={{ backgroundColor: '#ffffff' }}>
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
                 {/* Image Section */}
                 <div className="lg:col-span-5 relative h-64 lg:h-auto overflow-hidden">
@@ -82,12 +80,11 @@ export default function UseCaseTabs({ useCases }: Props) {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-slate-900/40 to-transparent"></div>
-                  <div className="absolute top-6 left-6">
-                    <div className="w-16 h-16 rounded-xl bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-lg">
+                  <div className="absolute top-6 left-6">                  <div className="w-16 h-16 rounded-xl bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-lg">
                       {IconComponent && (
-                        <IconComponent className="w-8 h-8 text-blue-600" />
+                        <IconComponent className="w-8 h-8 text-burgundy" />
                       )}
-                    </div>
+                  </div>
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <h2 className="text-2xl md:text-3xl font-bold mb-2">
@@ -112,14 +109,12 @@ export default function UseCaseTabs({ useCases }: Props) {
                           </p>
                         </div>
                       </div>
-                    </div>
-
-                    {/* Solution */}
-                    <div className="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-5">
+                    </div>                    {/* Solution */}
+                    <div className="bg-light-tan-dark border-l-4 border-burgundy rounded-r-lg p-5">
                       <div className="flex items-start gap-3">
-                        <Lightbulb className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" />
+                        <Lightbulb className="w-6 h-6 text-burgundy shrink-0 mt-0.5" />
                         <div>
-                          <h3 className="text-lg font-bold text-blue-900 mb-2">
+                          <h3 className="text-lg font-bold text-brown mb-2">
                             Solution
                           </h3>
                           <p className="text-gray-700 leading-relaxed">

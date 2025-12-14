@@ -11,11 +11,12 @@ const {
   style
 } = Astro.props;
 
-const baseStyles = 'bg-white rounded-xl shadow-lg p-6 border border-gray-100';
+const baseStyles = 'rounded-xl shadow-lg p-6 border border-gray-100';
 const hoverStyles = hover ? 'transition-all duration-300 hover:shadow-2xl hover:-translate-y-1' : '';
 const classes = `${baseStyles} ${hoverStyles} ${className}`;
+const finalStyle = style ? `background-color: #ffffff; ${style}` : 'background-color: #ffffff;';
 ---
 
-<div class={classes} style={style}>
+<div class={classes} style={finalStyle}>
   <slot />
 </div>

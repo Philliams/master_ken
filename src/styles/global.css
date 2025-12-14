@@ -1,12 +1,45 @@
 @import "tailwindcss";
 
+/* Custom Martial Arts Dojo Color Palette */
+:root {
+  /* Primary Colors */
+  --color-burgundy: #9f3434;      /* Burgundy Red - Primary accent */
+  --color-burgundy-light: #b84444;
+  --color-burgundy-dark: #7a2828;
+  
+  /* Dark Brown */
+  --color-brown: #331d1d;         /* Dark Brown - Text & Strong contrast */
+  --color-brown-light: #4a2f2f;
+  --color-brown-dark: #1f1212;
+  
+  /* Medium Tan */
+  --color-tan: #8d7051;           /* Medium Tan - Secondary accent */
+  --color-tan-light: #a58665;
+  --color-tan-dark: #6f5840;  /* Light Tan */
+  --color-light-tan: #f2d1b5;     /* Light Tan - Main background */
+  --color-light-tan-dark: #e1b486; /* Darker Tan - Headers/Cards */
+  --color-light-tan-darker: #d0a075;
+  
+  /* Off-white/Cream */
+  --color-cream: #ffffff;         /* White - Card backgrounds */
+}
+
 /* Smooth scrolling */
 html {
   @apply scroll-smooth;
 }
 
+/* Apply light tan background to body */
+body {
+  background-color: var(--color-light-tan);
+}
+
 .nav-active {
-  @apply after:content-[""] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-1.5 after:h-1.5 after:bg-blue-300 hover:after:bg-transparent after:rounded-full;
+  @apply after:content-[""] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-1.5 after:h-1.5 hover:after:bg-transparent after:rounded-full;
+}
+
+.nav-active::after {
+  background-color: var(--color-burgundy);
 }
 
 /* Animations */
@@ -39,8 +72,60 @@ html {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #2563eb, #0d9488);
+  background: linear-gradient(to right, var(--color-burgundy), var(--color-tan));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Utility classes for custom colors */
+.bg-burgundy { background-color: var(--color-burgundy); }
+.bg-burgundy-light { background-color: var(--color-burgundy-light); }
+.bg-burgundy-dark { background-color: var(--color-burgundy-dark); }
+.text-burgundy { color: var(--color-burgundy); }
+.text-burgundy-light { color: var(--color-burgundy-light); }
+.text-burgundy-dark { color: var(--color-burgundy-dark); }
+.border-burgundy { border-color: var(--color-burgundy); }
+.ring-burgundy { --tw-ring-color: var(--color-burgundy); }
+
+.bg-brown { background-color: var(--color-brown); }
+.bg-brown-light { background-color: var(--color-brown-light); }
+.bg-brown-dark { background-color: var(--color-brown-dark); }
+.text-brown { color: var(--color-brown); }
+.text-brown-light { color: var(--color-brown-light); }
+.text-brown-dark { color: var(--color-brown-dark); }
+.border-brown { border-color: var(--color-brown); }
+
+.bg-tan { background-color: var(--color-tan); }
+.bg-tan-light { background-color: var(--color-tan-light); }
+.bg-tan-dark { background-color: var(--color-tan-dark); }
+.text-tan { color: var(--color-tan); }
+.text-tan-light { color: var(--color-tan-light); }
+.text-tan-dark { color: var(--color-tan-dark); }
+.border-tan { border-color: var(--color-tan); }
+.ring-tan { --tw-ring-color: var(--color-tan); }
+
+.bg-light-tan { background-color: var(--color-light-tan); }
+.bg-light-tan-dark { background-color: var(--color-light-tan-dark); }
+.bg-light-tan-darker { background-color: var(--color-light-tan-darker); }
+.text-light-tan { color: var(--color-light-tan); }
+.text-light-tan-dark { color: var(--color-light-tan-dark); }
+.border-light-tan { border-color: var(--color-light-tan); }
+.border-light-tan-dark { border-color: var(--color-light-tan-dark); }
+
+/* Gradient backgrounds */
+.bg-gradient-burgundy {
+  background: linear-gradient(135deg, var(--color-burgundy) 0%, var(--color-burgundy-dark) 100%);
+}
+
+.bg-gradient-warm {
+  background: linear-gradient(135deg, var(--color-burgundy) 0%, var(--color-tan) 100%);
+}
+
+.bg-gradient-earth {
+  background: linear-gradient(135deg, var(--color-brown) 0%, var(--color-burgundy-dark) 100%);
+}
+
+.bg-gradient-tan {
+  background: linear-gradient(135deg, var(--color-tan) 0%, var(--color-tan-dark) 100%);
 }

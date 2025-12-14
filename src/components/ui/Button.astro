@@ -16,9 +16,9 @@ const {
 const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 shadow-md hover:shadow-lg active:scale-95';
 
 const variantStyles = {
-  primary: 'bg-primary-800 text-white hover:bg-primary-900',
-  secondary: 'bg-secondary-600 text-white hover:bg-secondary-700',
-  outline: 'border-2 border-primary-800 text-primary-800 hover:bg-primary-50'
+  primary: 'text-white hover:opacity-90',
+  secondary: 'text-white hover:opacity-90',
+  outline: 'border-2 text-white hover:bg-white/10'
 };
 
 const sizeStyles = {
@@ -29,9 +29,13 @@ const sizeStyles = {
 
 const classes = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
+// Add inline styles for gradients
+const inlineStyle = variant === 'primary' ? 'background: linear-gradient(135deg, #9f3434 0%, #7a2828 100%);' : 
+                     variant === 'secondary' ? 'background: linear-gradient(135deg, #8d7051 0%, #6f5840 100%);' : '';
+
 const Tag = href ? 'a' : 'button';
 ---
 
-<Tag href={href} class={classes}>
+<Tag href={href} class={classes} style={inlineStyle}>
     <slot />
 </Tag>

@@ -55,24 +55,24 @@ const industries: Industry[] = [
 const checkmarkPath = "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z";
 ---
 
-<section class="py-24 bg-linear-to-b from-slate-50 to-white">
+<section class="py-24" style="background-color: #f2d1b5;">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <div class="inline-block px-4 py-2 mb-4 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">
+      <div class="inline-block px-4 py-2 mb-4 text-sm font-semibold rounded-full" style="background-color: #e1b486; color: #331d1d;">
         Industries We Serve
       </div>
-      <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-        Solutions for <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-teal-600">Every Industry</span>
+      <h2 class="text-4xl md:text-5xl font-bold mb-6" style="color: #331d1d;">
+        Solutions for <span class="gradient-text">Every Industry</span>
       </h2>
-      <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+      <p class="text-xl max-w-3xl mx-auto leading-relaxed" style="color: #4a2f2f;">
         Tailored logistics and manufacturing solutions designed to meet the unique challenges of your industry.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {industries.map((industry) => (
-        <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-slate-100">
-          <div class={`w-16 h-16 rounded-xl bg-linear-to-br ${industry.iconGradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+      {industries.map((industry, index) => (
+        <div class="group rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-slate-100" style="background-color: #ffffff;">
+          <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" style={`background: linear-gradient(135deg, ${index % 2 === 0 ? '#9f3434 0%, #7a2828 100%' : '#8d7051 0%, #6f5840 100%'});`}>
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={industry.iconPath} />
             </svg>
@@ -80,11 +80,10 @@ const checkmarkPath = "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a
           <h3 class="text-2xl font-bold text-slate-900 mb-3">{industry.title}</h3>
           <p class="text-slate-600 leading-relaxed mb-4">
             {industry.description}
-          </p>
-          <ul class="space-y-2 text-sm text-slate-600">
+          </p>          <ul class="space-y-2 text-sm text-slate-600">
             {industry.features.map((feature) => (
               <li class="flex items-center">
-                <svg class="w-4 h-4 text-teal-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: #8d7051;">
                   <path fill-rule="evenodd" d={checkmarkPath} clip-rule="evenodd" />
                 </svg>
                 {feature}
@@ -93,15 +92,14 @@ const checkmarkPath = "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a
           </ul>
         </div>
       ))}
-    </div>
-
-    <!-- Bottom CTA -->
+    </div>    <!-- Bottom CTA -->
     <div class="text-center mt-16">
       <a 
-        href="/use-cases" 
-        class="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-linear-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 rounded-lg shadow-lg hover:shadow-xl transition-all group"
+        href="/capabilities" 
+        class="inline-flex items-center px-8 py-4 text-base font-semibold text-white rounded-lg shadow-lg hover:shadow-xl transition-all group"
+        style="background: linear-gradient(135deg, #9f3434 0%, #7a2828 100%);"
       >
-        View Industry Solutions
+        View All Capabilities
         <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
