@@ -1,16 +1,19 @@
 // Site configuration
 export const SITE = {
-  title: 'AstroFlow',
-  description: 'Leading provider of optimized logistics and manufacturing solutions with state-of-the-art facilities and industry expertise.',
-  url: 'https://yourdomain.com',
-  author: 'AstroFlow',
+  title: 'Master Ken',
+  description: '-- Put Small Description Blurb --',
+  url: 'https://philliams.github.io/master_ken',
+  author: 'Master ken',
 } as const;
 
 export const NAVIGATION = [
   { name: 'Home', href: '/' },
-  { name: 'Capabilities', href: '/capabilities' },
-  { name: 'Request Quote', href: '/rfq' },
-  { name: 'Documentation', href: '/documentation' },
+  { name: 'Traditional Martial Arts', href: '/traditional_martial_arts' },
+  { name: 'Mixed Martial Arts', href: '/mixed_martial_arts' },
+  { name: 'Fitness', href: '/personal_fitness'},
+  { name: 'Child Programs', href: '/child_programs' },
+  { name: 'About', href: '/about'}
+  // { name: 'Documentation', href: '/documentation' },
 ] as const;
 
 export const SOCIAL_LINKS = {
