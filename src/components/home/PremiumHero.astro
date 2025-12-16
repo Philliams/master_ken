@@ -1,7 +1,9 @@
 ---
 import { Image } from 'astro:assets';
 import Button from '../ui/Button.astro';
-import heroBgImg from '@assets/taekwondo_hero.jpg';
+import heroBgImg from '@assets/kid_program-2.jpg';
+import logoImg from '@assets/logo.png';
+
 ---
 
 <section class="relative h-screen min-h-[600px] flex items-center overflow-hidden">  <!-- Background Image with Overlay -->
@@ -19,33 +21,39 @@ import heroBgImg from '@assets/taekwondo_hero.jpg';
   </div>
   <!-- Content -->
   <div class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">    <div class="max-w-4xl">
-      <div class="inline-flex items-center px-4 py-2 mb-6 bg-gradient-burgundy text-white text-sm font-semibold rounded-full shadow-lg">
-        <!-- <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+      <!-- <div class="inline-flex items-center px-4 py-2 mb-6 bg-gradient-burgundy text-white text-sm font-semibold rounded-full shadow-lg">
+        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
           <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
-        </svg> -->
+        </svg>
         Martial Arts and Personal Fitness
-      </div>
-      
+      </div> -->
+
       <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-        Master Ken Traditional and Mixed Martial Arts
-        <span class="hero-gradient-text block mt-2">
-          40 Years in the making
-        </span>
+        Ken Blackburn's <br> Martial Arts
+        <!-- <span class="hero-gradient-text block mt-2"> -->
+        <!-- <hr>
+        <p class="text-xl md:text-2xl text-slate-200 mb-8 max-w-2xl leading-relaxed">
+          Taekwondo
+          <Image src={logoImg} alt="A small icon" class="w-10 h-10 object-contain" width={100} height={100} style={{ display: 'inline-block', verticalAlign: 'middle' }} />
+          Hapkido
+          <Image src={logoImg} alt="A small icon" class="w-10 h-10 object-contain" width={100} height={100} style={{ display: 'inline-block', verticalAlign: 'middle' }} />
+          Boxing
+        </p> -->
       </h1>
       
       <p class="text-xl md:text-2xl text-slate-200 mb-8 max-w-2xl leading-relaxed">
-        -- Put paragraph here for ken's philosopy -- 
+        With over 40 yeast Master Ken is one of the most experienced instructors in the region and has watched the martial arts landscape change over the years to where you are in large classes, high monthly fees with junior instructors.  Wanting to keep the focus of your martial arts journey focused on the growth of each student you will experience the benefits that come with decades of experience where class sizes are capped at 4 with the fees designed not to break the budget where the program is designed around your personal goals.  Start your personal journey now-book your personal consultation and trial class now. 
       </p>
       
       <div class="flex flex-col sm:flex-row gap-4 mb-12">
         <Button href="/master_ken/contact" size="lg" class="bg-burgundy! hover:bg-burgundy-dark! text-white! shadow-2xl!">
           Contact
         </Button>
-        <Button href="/master_ken/traditional_martial_arts" size="lg" variant="outline" class="border-2! border-white! text-white! hover:bg-white/10! shadow-2xl!">
-          Traditional Martial Arts
+        <Button href="/master_ken/adult_programs" size="lg" class="bg-burgundy! hover:bg-burgundy-dark! text-white! shadow-2xl!">
+          Adult Programs
         </Button>
-        <Button href="/master_ken/mixed_martial_arts" size="lg" variant="outline" class="border-2! border-white! text-white! hover:bg-white/10! shadow-2xl!">
-          Mixed Martial Arts
+        <Button href="/master_ken/child_programs" size="lg" class="bg-burgundy! hover:bg-burgundy-dark! text-white! shadow-2xl!">
+          Child Programs
         </Button>
       </div>      <!-- Quick Stats -->
       <div class="grid grid-cols-2 md:grid-cols-3 gap-6 pt-8 border-t border-white/20">

@@ -7,12 +7,10 @@ export const SITE = {
 } as const;
 
 export const NAVIGATION = [
-  { name: 'Home', href: '/' },
-  { name: 'Traditional Martial Arts', href: '/master_ken/traditional_martial_arts' },
-  { name: 'Mixed Martial Arts', href: '/master_ken/mixed_martial_arts' },
-  { name: 'Fitness', href: '/master_ken/personal_fitness'},
-  { name: 'Child Programs', href: '/master_ken/child_programs' },
-  { name: 'About', href: '/master_ken/about'}
+  { name: 'Home', href: '/master_ken' },
+  { name: 'About', href: '/master_ken/about'},
+  { name: 'Adult Programs', href: '/master_ken/adult_programs' },
+  { name: 'Child Programs', href: '/master_ken/child_programs' }
   // { name: 'Documentation', href: '/documentation' },
 ] as const;
 

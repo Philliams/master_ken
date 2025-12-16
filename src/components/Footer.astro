@@ -3,7 +3,7 @@ import { NAVIGATION, SOCIAL_LINKS, SITE } from '@config/site';
 import { Package, Linkedin, Twitter, Facebook } from 'lucide-react';
 import { Image } from 'astro:assets';
 
-import logoImg from '@assets/logo-bird.png';
+import logoImg from '@assets/logo_text.png';
 
 ---
 
@@ -11,14 +11,14 @@ import logoImg from '@assets/logo-bird.png';
   <div class="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-12 lg:grid-cols-4">
       <!-- Company Info -->      <div class="lg:col-span-1 space-y-6">        <a href="/" class="flex items-center space-x-3 group">
-          <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-warm">
+          <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-burgundy">
             <!-- <Package className="w-7 h-7 text-white" /> -->
             <Image 
             src={logoImg}
             alt= "Master Ken logo"
-            class="w-7 h-7 object-cover"
-            width={40}
-            height={40}
+            class="w-10 h-10 object-contain"
+            width={300}
+            height={300}
           />
           </div>
           <span class="text-2xl font-bold text-white">
