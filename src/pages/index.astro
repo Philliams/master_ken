@@ -8,6 +8,40 @@ import IndustriesServed from '../components/home/IndustriesServed.astro';
 import ProcessWorkflow from '../components/home/ProcessWorkflow.astro';
 import Testimonials from '../components/home/Testimonials.astro';
 import PremiumCTA from '../components/home/PremiumCTA.astro';
+import Timeline from '../components/Timeline.astro';
+
+const timelineData = [
+  {
+    year: '2020-Present',
+    company: 'Head Instructor & Dojo Owner',
+    designation: 'Master Ken Martial Arts Academy',
+    description: 'Leading comprehensive martial arts programs including Traditional Martial Arts, Mixed Martial Arts, Personal Fitness, and specialized Child Programs.'
+  },
+  {
+    year: '2015-2020',
+    company: 'Senior Instructor',
+    designation: 'Elite Combat Training Center',
+    description: 'Specialized in advanced Taekwondo, Hapkido, and MMA training. Coached multiple students to regional and national championship titles.'
+  },
+  {
+    year: '2010-2015',
+    company: 'Martial Arts Instructor',
+    designation: 'Rising Dragon Academy',
+    description: 'Taught traditional martial arts disciplines with focus on youth development and character building. Developed youth programs for ages 5-17.'
+  },
+  {
+    year: '2005-2010',
+    company: 'Assistant Instructor & Competitor',
+    designation: 'Pacific Martial Arts Institute',
+    description: 'Earned 4th Degree Black Belt in Taekwondo and 3rd Degree in Hapkido. Competed in national tournaments while assisting with beginner classes.'
+  },
+  {
+    year: '2000-2005',
+    company: 'Student & Junior Instructor',
+    designation: 'Traditional Martial Arts Foundation',
+    description: 'Began martial arts journey as a dedicated student. Progressed through belt ranks and earned certification to teach foundational techniques.'
+  }
+];
 ---
 
 <BaseLayout>
@@ -18,5 +52,6 @@ import PremiumCTA from '../components/home/PremiumCTA.astro';
   <!-- <StatsShowcase /> -->
   <!-- <ImageGrid /> -->
   <!-- <ProcessWorkflow /> -->
+  <Timeline items={timelineData} />
   <PremiumCTA />
 </BaseLayout>
