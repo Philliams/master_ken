@@ -13,6 +13,8 @@ import operationsManualImg from '@assets/photo-1521737604893-d14cc237f11d.jpg';
 
 import formsTemplatesImg from '@assets/photo-1450101499163-c8848c66ca85.jpg';
 import heroBgImg from '@assets/taekwondo_hero.jpg';
+import Timeline from '../components/Timeline.astro';
+
 
 // Icon SVG paths
 const iconPaths = {
@@ -136,6 +138,63 @@ const faqs = [
     answer: 'Yes, our mobile application is available for both iOS and Android devices. You can download it from the App Store or Google Play Store. The app provides full access to all documentation and features offline reading capabilities.'
   }
 ];
+
+const timelineData = [
+  {
+    year: '2020-Present',
+    company: 'Head Instructor & Dojo Owner',
+    designation: 'Master Ken Martial Arts Academy',
+    description: 'Leading comprehensive martial arts programs including Traditional Martial Arts, Mixed Martial Arts, Personal Fitness, and specialized Child Programs.'
+  },
+  {
+    year: '2020-Present',
+    company: 'Head Instructor & Dojo Owner',
+    designation: 'Master Ken Martial Arts Academy',
+    description: 'Leading comprehensive martial arts programs including Traditional Martial Arts, Mixed Martial Arts, Personal Fitness, and specialized Child Programs.'
+  },
+  {
+    year: '2007',
+    company: 'Competing Internationally',
+    designation: '-- tbd --',
+    description: 'Competed internationally at the 2nd World Taekwondo Poomsae Championships and the World Taekwondo Hanmadang in South Korea. Guest of the Korean Tigers Demonstration Team in Seoul to receive advanced instruction on coaching and demonstration techniques.'
+  },
+  {
+    year: '2001-2003',
+    company: 'Team Ontario Taekwondo Coach',
+    designation: '-- tbd --',
+    description: 'Coached junior provincial black belt gold medalists and national silver medalists for Team Ontario'
+  },
+  {
+    year: '1999',
+    company: 'Taekwondo World Championships',
+    designation: '-- tbd --',
+    description: 'Selected to perform at the World Taekwondo Championships in Edmonton, Alberta'
+  },
+  {
+    year: '1996',
+    company: 'Pan-Am Championship',
+    designation: '-- tbd --',
+    description: 'Led the Canadian team to a Gold Medal at the Pan-Am Demonstration Championships in Disneyland, California.'
+  },
+  {
+    year: '1992-1999',
+    company: 'Martial Arts Instructor',
+    designation: '-- tbd --',
+    description: 'Developed and coached a youth Taekwondo Demonstration Team that performed at the CISM Military Championships and Canadian National Championships.'
+  },
+  {
+    year: '1989–1991',
+    company: 'Competing Nationally in Taekwondo',
+    designation: 'Top 10 in Canada',
+    description: 'Consistently placed in the Ontario Team Trials, reached a top 10 ranking in Canada for Full Contact Sparring and placed 2nd in the Battle of Toronto Martial Arts Championships'
+  },
+  {
+    year: '1987',
+    company: 'Achieved 1st Dan Black Belt in Taekwondo',
+    designation: '-- tbd --',
+    description: '-- tbd --'
+  }
+];
 ---
 
 <BaseLayout title="Documentation - Resources & Guides">
@@ -170,7 +229,7 @@ const faqs = [
         </h1>
         
         <p class="text-xl md:text-2xl text-slate-200 mb-8 max-w-3xl mx-auto leading-relaxed animate-fadeInUp" style="animation-delay: 0.1s">
-          -- Have a short 1-2 sentence summary --
+          From a top-ranked national competitor to a master of the 6th Dan Black Belt, Master Ken brings 45 years of elite training and championship coaching directly to your doorstep.
         </p>
 
         <!-- <div class="flex flex-wrap justify-center gap-4 text-sm text-slate-300 animate-fadeInUp" style="animation-delay: 0.2s">
@@ -324,27 +383,10 @@ const faqs = [
         <!-- Frequently Asked <span class="gradient-text">Questions</span> -->
       </h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-      Master Kens journey in martial arts started 45 years ago where his childhood and reasons for
-      wanting to train martial arts was right out of the original Karate Kid movie. He went on to have
-      a successful caterer as both an athlete and coach. Having obtained his black belt in Taekwondo
-      September 1987 he went on to a highly successful career obtaining top two placing in Ontario,
-      top 20 in Canada and coaching a team to Pan-Am gold medal. He then turned his attention to
-      teaching where he started with 4 students in 1988 and went on to build a full-time career
-      opening a school that had approximately 200 students.
-      Closing down his program to care of his partner with terminal cancer, Master Ken is looking to
-      establish a unique program and dynamic program right here in Kanata/Stittsville by developing
-      a program unique enough to enable him to transform life by boosting your physical and mental
-      well-being though the power of Martial Art leading to a fitter, happier you.
-      With extensive training in numerous Martial Arts combined over 40 years teaching Taekwondo
-      as well as coaching various sports (baseball, hockey, track &amp; field) enables him to develop a
-      program unmatched where you will have so much fun you will not notice the constant
-      improvements in your fitness, concentration, self-confidence/self-esteem, metal clarity and
-      overall physical well-being delivered in a program personalized around your goals with a
-      schedule designed around your availability where depending on the program designed can be
-      run out of your home where home based programs are available,
-      Taekwondo-6 th Dan Black belt 45 years
-      Boxing-20 years training; NCCP Level 1 Caching certification
-      Hapkido-1 st Dan Black Belt
+      With over 45 years of experience, Master Ken is a 6th Dan Taekwondo Black Belt and 1st Dan Hapkido Black Belt who transformed a childhood fascination with the "Karate Kid" into a premier martial arts career.
+      As an elite athlete, he achieved a top-10 national ranking in sparring and later coached a demonstration team to Pan-Am gold.
+      After successfully operating a full-time school for hundreds of students, he is now launching a unique, personalized program in Kanata/Stittsville that leverages his diverse background in martial arts and multi-sport coaching to boost your physical and mental well-being.
+      This dynamic approach focuses on achieving life-changing results in fitness, confidence, and mental clarity through training tailored to your specific goals and schedule.
       </p>
     </div>
 
@@ -371,6 +413,7 @@ const faqs = [
         </ImageReveal>
       ))}
     </div> -->
+    <Timeline items={timelineData} />
   </Section>
 
   <!-- Help Section -->
